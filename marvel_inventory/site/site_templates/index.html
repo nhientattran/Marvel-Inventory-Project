@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Let's Build Your Marvel Characters Collection!</h2>
+            <h5>Create The Collection of Your Favourite Marvel Characters, Get Informations That You Haven't Knownn And Further More!</h5>
+            <div>
+            <button class="btn btn-primary" type="button">View Our Docs</button>
+            <button class="btn btn-primary" type="button" onclick="window.open('https://www.marvel.com/', 'blank_')">Read Marvel Comics</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/marvel_cinematic.jpg" alt="Marvel Characters Image" class="header-image">
+        </div>
+    </header>
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/api.png" alt="API Route Image">
+            <h4 style="padding-top: 20px;">Dedicated API Routes</h4>
+            <p>Our website provides dedicated API routes that allow developers to easily integrate and access data for their drone collecting applications.</p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/graphql.png" alt="GraphQL API Image">
+            <h4 style="padding-top: 20px;">GraphQL API Route</h4>
+            <p>Our GraphQL API route offers a powerful query language that enables developers to retrieve all the necessary data from a single endpoint, facilitating efficient and flexible data access.</p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/db.png" alt="PostgreSQL Image">
+            <h4 style="padding-top: 20px;">Backed by a PostgreSQL</h4>
+            <p>Our website utilizes a secure PostgreSQL database to store all data related to drone collecting. This ensures the reliability and durability of the stored information.</p>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/marvel_community.jpeg" alt="Community Image">
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>Community Interaction</h4>
+            <p> Our website brings together like-minded Marvel Fans, providing a platform for collaboration and knowledge sharing. Users can connect with other developers worldwide to exchange ideas and work on exciting projects together.</p>
+            <div>
+                <button class="btn btn-primary" onclick="window.open('https://github.com/nhientattran/Marvel-Inventory-Project.git', 'blank_')">View On Github</button>
+                <button class="btn btn-primary" onclick="window.open('https://discord.com', 'blank_')">Join Our Discord Channel</button>
+            </div>
+        </div>
+    </section>
+    <footer class="row" id="footer">
+        <div class="col-2">
+            <img style="padding-top: 30px;" src="../../static/images/marvel_small_logo.png" alt="Marvel Image">
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Platform:</h4>
+                <li><a href="#">Why Us?</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Our Process</a></li>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Contact Us:</h4>
+                <li><a href="mailto: nhientattran@gmail.com">Send Email</a></li>
+                <li><a href="https://github.com/nhientattran/">Visit My Github</a></li>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock content %}

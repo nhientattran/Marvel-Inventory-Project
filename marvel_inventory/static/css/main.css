@@ -1,0 +1,134 @@
+/* Nav Styles */
+
+.ct-nav {
+    display: flex;
+    justify-content: space-between;     
+}
+
+/* Main Logo Image */
+.ct-nav img{
+    width: 25%; 
+    max-width: 100%;
+    margin-left: 2vw; 
+}
+
+#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px; 
+    padding-bottom: 40px;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: .4vw;
+    color: black; 
+}
+
+#horizontal-list a:nth-last-child(1){
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin-right: .2vw; 
+}
+
+/* End Nav Styles */
+
+/* Hero Section Styles */
+
+#header-text {
+    padding: 2vw;
+}
+
+.header-image {
+    width: 82%;
+    max-width: 100%; 
+}
+
+/* End of Hero Section */
+
+
+
+/* Middle Section Styles */
+#middle-text{
+    text-align: center;
+    padding: 13vh; 
+}
+
+#middle-text h2{
+    padding: 1.5vw; 
+}
+
+/* End of Middle Section */
+
+/* Feature Section Styles */
+#preset-image, #rank-image, #recruit-image{
+    margin-bottom: 1vh;
+    margin-top: 10vh;
+    width: 96%;
+    height: 96%; 
+}
+
+#features-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8vw; 
+    padding: 20px;
+
+}
+
+/* End of Features Section */
+
+/* Community Section Styles */
+
+#background-image{
+    width: 80%;
+    margin-left: 3vw; 
+}
+
+/* End of Community Section */
+
+/* Footer Section Styles */
+
+.footer-text-flex{
+    display: flex;
+    flex-direction: column; 
+    margin-top: 1.2vw; 
+    padding-left: 40px;
+}
+
+#footer-logo{
+    width: 100%;
+    max-width: 100%; 
+    padding-top: 45px;
+}
+
+#footer{
+    border-top: 3px solid black;
+    margin-top: 20vh; 
+    padding-bottom: 15px;
+}
+
+/* End Footer Section */
+
+/* Profile Section */
+.hero-section{
+    height: 100vh;
+    background-image: url(../images/marvel_background.jpg);
+    background-size: cover;
+    background-position: 35% 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    left: 20rem;
+    top: 10rem;
+    color: black;
+    font-size: 50px;
+}
+

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'auth-success' %}
+                <div class="container">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert" onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<header class="hero-section">
+    <h3 class="header-text">Welcome to Marvel Characters Collection! {{ current_user.username.title() }}</h3>
+    <main class="container character_form">
+        <div class="row">
+            <aside class="col-12 col-md-6">
+                <h2>Insert a Character!</h2>
+                {% include 'characterform.html' %}
+            </aside>
+        </div>
+    </main>
+</header>
+
+<div class="container">
+    <h3>Your Profile Details:</h3>
+    <ul class="list-group">
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token: {{ current_user.token }}</li>
+    </ul>
+    <div class="row">
+        {% for character in characters %}
+        <div class="card" style="width: 18rem;">
+            <img src="../../static/images/marvel_logo.png" class="card-img-top" alt="Marvel Logo">
+            <div class="card-body">
+            <h5 class="card-title">{{ character.name }}</h5>
+            <p class="card-text">{{ character.api_description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{character.movies_appeared}}</li>
+            <li class="list-group-item">{{character.super_power}}</li>
+            </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Update Character</a>
+            <a href="#" class="card-link">Delete Character</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

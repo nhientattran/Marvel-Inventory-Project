@@ -1,0 +1,26 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset class="name-field">
+            {{ form.name.label }}
+            {{ form.name(class='form-control', placeholder='Name') }}
+        </fieldset>
+        <fieldset class="description-field">
+            {{ form.description.label }}
+            {{ form.description(class='form-control', placeholder='Description') }}
+        </fieldset>
+        <fieldset class="movies-field">
+            {{ form.movies_appeared.label }}
+            {{ form.movies_appeared(class='form-control', placeholder='Movies Appeared') }}
+        </fieldset>
+        <fieldset class="power-field">
+            {{ form.super_power.label }}
+            {{ form.super_power(class='form-control', placeholder='Super Power') }}
+        </fieldset>
+        <fieldset class="date-field">
+            {{ form.date_created.label }}
+            {{ form.date_created(class='form-control', placeholder='Date Created') }}
+        </fieldset>
+        {{ form.submit_button(class = 'btn btn-primary btn-block mt-2') }}
+    </div>
+</form>
