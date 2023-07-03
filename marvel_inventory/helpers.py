@@ -53,36 +53,36 @@ def description_generator(name):
 
     return data[0]['description']
 
-# def movies_appeared_generator(name):
-#     name = str(name)
-#     url = "https://marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com/name"
+def movies_appeared_generator(name):
+    name = str(name)
+    url = "https://marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com/name"
 
-#     querystring = {"q": name}
+    querystring = {"q": name}
 
-#     headers = {
-#         "X-RapidAPI-Key": "4150364e67mshd14a8c1aa2795d4p10d4c4jsnb57e2361fc4d",
-#         "X-RapidAPI-Host": "marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com"
-#     }
+    headers = {
+        "X-RapidAPI-Key": "4150364e67mshd14a8c1aa2795d4p10d4c4jsnb57e2361fc4d",
+        "X-RapidAPI-Host": "marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com"
+    }
 
-#     response = requests.get(url, headers=headers, params=querystring)
+    response = requests.get(url, headers=headers, params=querystring)
 
-#     data = response.json()
+    data = response.json()
 
-#     return data[0]['appearances']
+    return data[0]['appearances'][0] + " " + data[0]['appearances'][1]
     
-# def super_power_generator(name):
-#     name = str(name)
-#     url = "https://marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com/name"
+def super_power_generator(name):
+    name = str(name)
+    url = "https://marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com/name"
 
-#     querystring = {"q": name}
+    querystring = {"q": name}
 
-#     headers = {
-#         "X-RapidAPI-Key": "4150364e67mshd14a8c1aa2795d4p10d4c4jsnb57e2361fc4d",
-#         "X-RapidAPI-Host": "marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com"
-#     }
+    headers = {
+        "X-RapidAPI-Key": "4150364e67mshd14a8c1aa2795d4p10d4c4jsnb57e2361fc4d",
+        "X-RapidAPI-Host": "marvel-heroic-api-unlock-the-mcu-legendary-characters.p.rapidapi.com"
+    }
 
-#     response = requests.get(url, headers=headers, params=querystring)
+    response = requests.get(url, headers=headers, params=querystring)
 
-#     data = response.json()
+    data = response.json()
 
-#     return data[0]['powers']
+    return data[0]['powers']

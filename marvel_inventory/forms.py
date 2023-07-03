@@ -11,7 +11,7 @@ class UserLoginForm(FlaskForm):
 class CharacterForm(FlaskForm):
     name = StringField('Name')
     description = StringField('Description',validators=[Optional()])
-    movies_appeared = StringField('Appeared in Movies')
-    super_power = StringField('Super Power')
-    date_created = DateTimeField('Date Created')
+    movies_appeared = StringField('Appeared in Movies',validators=[Optional()])
+    super_power = StringField('Super Power',validators=[Optional()])
+    date_created = DateTimeField('Date Created',validators=[Optional()])
     submit_button = SubmitField()

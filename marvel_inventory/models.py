@@ -54,16 +54,16 @@ class User(db.Model, UserMixin):
 class Character(db.Model):
     id = db.Column(db.String, primary_key = True)
     name = db.Column(db.String(150))
-    api_description = db.Column(db.String(10000))
+    description = db.Column(db.String(10000))
     movies_appeared = db.Column(db.String(10000))
     super_power = db.Column(db.String(500))
     date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
-    def __init__(self, name, api_description, movies_appeared, super_power, date_created, user_token):
+    def __init__(self, name, description, movies_appeared, super_power, date_created, user_token):
         self.id = self.set_id()
         self.name = name
-        self.description = api_description
+        self.description = description
         self.movies_appeared = movies_appeared
         self.super_power = super_power
         self.date_created = date_created
@@ -77,7 +77,7 @@ class Character(db.Model):
 
 class CharacterSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'name', 'api_description', 'movies_appeared', 'super_power', 'date_created']
+        fields = ['id', 'name', 'description', 'movies_appeared', 'super_power', 'date_created']
 
 character_schema = CharacterSchema()
 characters_schema = CharacterSchema(many = True)
